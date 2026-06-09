@@ -1,7 +1,7 @@
 from typing import List, Any
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from .. import models, schemas, auth, database
+import models, schemas, auth, database
 
 router = APIRouter(
     prefix="/tasks",

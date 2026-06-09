@@ -2,8 +2,8 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from . import models, database
-from .routes import users, tasks
+import models, database
+from routes import users, tasks
 
 # 1. CREATE DATABASE TABLES
 models.Base.metadata.create_all(bind=database.engine)
